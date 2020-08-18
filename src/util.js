@@ -19,6 +19,7 @@ const convertYNAnswer = (answer) => {
   return answer;
 };
 const playGame = (numOfTries = 3, maxNum = 200) => {
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < numOfTries; i += 1) {
     const randomNum = generateNumber(maxNum);
     console.log(`Question: ${randomNum}`);
