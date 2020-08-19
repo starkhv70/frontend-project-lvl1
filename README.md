@@ -12,6 +12,11 @@
 ```sh
 make install
 ```
+
 ## Игра "Проверка на четность"
 
 [![asciicast](https://asciinema.org/a/E6myv4XZr0ADhhVhFbD6uj6Jl.svg)](https://asciinema.org/a/E6myv4XZr0ADhhVhFbD6uj6Jl)
+
+## Игра "Калькулятор"
+
+[![asciicast](https://asciinema.org/a/QQcHNrog55Rh7PIWjZEXLLR89.svg)](https://asciinema.org/a/QQcHNrog55Rh7PIWjZEXLLR89)
