@@ -1,6 +1,4 @@
-import generateNumber from '../util.js';
-
-const isEven = (num) => num % 2 === 0;
+import { generateNumber, isEven } from '../util.js';
 
 const greeting = 'Answer "yes" if the number is even, otherwise answer "no".';
 
