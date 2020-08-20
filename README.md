@@ -20,3 +20,7 @@ make install
 ## Игра "Калькулятор"
 
 [![asciicast](https://asciinema.org/a/QQcHNrog55Rh7PIWjZEXLLR89.svg)](https://asciinema.org/a/QQcHNrog55Rh7PIWjZEXLLR89)
+
+## Игра "НОД"
+
+[![asciicast](https://asciinema.org/a/BddYY8JuHL2MOuMUHWD0SFuuL.svg)](https://asciinema.org/a/BddYY8JuHL2MOuMUHWD0SFuuL)
