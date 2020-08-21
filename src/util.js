@@ -9,4 +9,14 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
-export { generateNumber, gcd, isEven };
+const generateProgression = (firstMember, step, length = 10) => {
+  const progression = [];
+  for (let index = 0; index < length; index += 1) {
+    progression.push(firstMember + index * step);
+  }
+  return progression;
+};
+
+export {
+  generateNumber, generateProgression, gcd, isEven,
+};

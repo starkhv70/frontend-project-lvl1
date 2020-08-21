@@ -24,3 +24,7 @@ make install
 ## Игра "НОД"
 
 [![asciicast](https://asciinema.org/a/BddYY8JuHL2MOuMUHWD0SFuuL.svg)](https://asciinema.org/a/BddYY8JuHL2MOuMUHWD0SFuuL)
+
+## Игра "Арифметическая прогрессия"
+
+[![asciicast](https://asciinema.org/a/gNFmZvZCv9Z6knLJkhAdzPrf2.svg)](https://asciinema.org/a/gNFmZvZCv9Z6knLJkhAdzPrf2)
