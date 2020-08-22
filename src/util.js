@@ -17,6 +17,15 @@ const generateProgression = (firstMember, step, length = 10) => {
   return progression;
 };
 
+const isPrime = (n) => {
+  for (let i = 2; i <= Math.sqrt(n); i += 1) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
 export {
-  generateNumber, generateProgression, gcd, isEven,
+  generateNumber, generateProgression, gcd, isEven, isPrime,
 };
