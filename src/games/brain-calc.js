@@ -1,11 +1,11 @@
-import generateNumber from '../util.js';
+import generateRandomNumber from '../util.js';
 
 const greeting = 'What is the result of the expression?';
 
 const makeQuestion = (maxNumber = 200) => {
-  const firstNum = generateNumber(maxNumber);
-  const secondNum = generateNumber(maxNumber);
-  const operationCode = generateNumber(3);
+  const firstNum = generateRandomNumber(maxNumber);
+  const secondNum = generateRandomNumber(maxNumber);
+  const operationCode = generateRandomNumber(3);
   let operation;
   let answer;
   switch (operationCode) {
