@@ -1,4 +1,5 @@
 import generateRandomNumber from '../util.js';
+import gameEngine from '../index.js';
 
 const greeting = 'Find the greatest common divisor of given numbers.';
 
@@ -17,4 +18,4 @@ const makeQuestion = (maxNumber = 200) => {
   return { question, answer: String(answer) };
 };
 
-export { makeQuestion, greeting };
+export default () => gameEngine(greeting, makeQuestion);

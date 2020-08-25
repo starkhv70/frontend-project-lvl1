@@ -1,4 +1,5 @@
 import generateRandomNumber from '../util.js';
+import gameEngine from '../index.js';
 
 const greeting = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -10,4 +11,4 @@ const makeQuestion = (maxNumber = 200) => {
   return { question, answer };
 };
 
-export { makeQuestion, greeting };
+export default () => gameEngine(greeting, makeQuestion);

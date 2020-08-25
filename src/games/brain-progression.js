@@ -1,4 +1,5 @@
 import generateRandomNumber from '../util.js';
+import gameEngine from '../index.js';
 
 const greeting = 'What number is missing in the progression?';
 
@@ -21,4 +22,4 @@ const makeQuestion = (maxNumber = 200, progressionLength = 10) => {
   return { question, answer: String(answer) };
 };
 
-export { makeQuestion, greeting };
+export default () => gameEngine(greeting, makeQuestion);

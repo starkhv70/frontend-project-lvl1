@@ -1,4 +1,5 @@
 import generateRandomNumber from '../util.js';
+import gameEngine from '../index.js';
 
 const greeting = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -17,4 +18,4 @@ const makeQuestion = (maxNumber = 200) => {
   return { question, answer: String(answer) };
 };
 
-export { makeQuestion, greeting };
+export default () => gameEngine(greeting, makeQuestion);

@@ -1,4 +1,5 @@
 import generateRandomNumber from '../util.js';
+import gameEngine from '../index.js';
 
 const greeting = 'What is the result of the expression?';
 
@@ -28,4 +29,4 @@ const makeQuestion = (maxNumber = 200) => {
   return { question, answer: String(answer) };
 };
 
-export { makeQuestion, greeting };
+export default () => gameEngine(greeting, makeQuestion);

@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const playGame = (gameCondition, questionFunc, numOfTries = 3) => {
+const gameEngine = (gameCondition, questionFunc, numOfTries = 3) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ', { limit: /\p{L}/gu });
   console.log(`Hello, ${userName}!`);
@@ -20,4 +20,4 @@ const playGame = (gameCondition, questionFunc, numOfTries = 3) => {
   return true;
 };
 
-export default playGame;
+export default gameEngine;
