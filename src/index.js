@@ -1,23 +1,27 @@
+/* eslint-disable filenames/match-exported */
+
 import readlineSync from 'readline-sync';
 
-const gameEngine = (gameCondition, questionFunc, numOfTries = 3) => {
+const maxRandomNumber = 200;
+
+const createGamePlay = (title, questionFunc) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ', { limit: /\p{L}/gu });
   console.log(`Hello, ${userName}!`);
-  console.log(gameCondition);
+  console.log(title);
+  const numOfTries = 3;
   for (let i = 0; i < numOfTries; i += 1) {
-    const { question, answer } = questionFunc();
+    const { question, answer } = questionFunc(maxRandomNumber);
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer:');
     if (userAnswer !== answer) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".`);
       console.log(`Let's try again, ${userName}!`);
-      return false;
+      return;
     }
     console.log('Correct!');
   }
   console.log(`Congratulations, ${userName}!`);
-  return true;
 };
 
-export default gameEngine;
+export default createGamePlay;

@@ -1,21 +1,21 @@
 import generateRandomNumber from '../util.js';
-import gameEngine from '../index.js';
+import createGamePlay from '../index.js';
 
-const greeting = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const title = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const isPrime = (n) => {
-  for (let i = 2; i <= Math.sqrt(n); i += 1) {
-    if (n % i === 0) {
+const isPrime = (number) => {
+  for (let i = 2; i <= Math.sqrt(number); i += 1) {
+    if (number % i === 0) {
       return false;
     }
   }
   return true;
 };
 
-const makeQuestion = (maxNumber = 200) => {
+const makeQuestionWithAnswer = (maxNumber) => {
   const question = generateRandomNumber(maxNumber);
   const answer = (isPrime(question)) ? 'yes' : 'no';
   return { question, answer: String(answer) };
 };
 
-export default () => gameEngine(greeting, makeQuestion);
+export default () => createGamePlay(title, makeQuestionWithAnswer);

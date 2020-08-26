@@ -1,9 +1,9 @@
 import generateRandomNumber from '../util.js';
-import gameEngine from '../index.js';
+import createGamePlay from '../index.js';
 
-const greeting = 'What is the result of the expression?';
+const title = 'What is the result of the expression?';
 
-const makeQuestion = (maxNumber = 200) => {
+const makeQuestionWithAnswer = (maxNumber) => {
   const firstNum = generateRandomNumber(maxNumber);
   const secondNum = generateRandomNumber(maxNumber);
   const operationCode = generateRandomNumber(3);
@@ -25,8 +25,8 @@ const makeQuestion = (maxNumber = 200) => {
     default:
       break;
   }
-  const question = [firstNum, operation, secondNum].join(' ');
+  const question = `${firstNum} ${operation} ${secondNum}`;
   return { question, answer: String(answer) };
 };
 
-export default () => gameEngine(greeting, makeQuestion);
+export default () => createGamePlay(title, makeQuestionWithAnswer);

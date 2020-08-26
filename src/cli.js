@@ -1,3 +1,5 @@
+/* eslint-disable filenames/match-exported */
+
 import readlineSync from 'readline-sync';
 
 const greetingUser = () => {
