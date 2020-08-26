@@ -3,18 +3,18 @@ import createGamePlay from '../index.js';
 
 const title = 'Find the greatest common divisor of given numbers.';
 
-const gcd = (a, b) => {
-  if (b === 0) {
-    return Math.abs(a);
+const gcd = (firstNumber, secondNumber) => {
+  if (secondNumber === 0) {
+    return Math.abs(firstNumber);
   }
-  return gcd(b, a % b);
+  return gcd(secondNumber, firstNumber % secondNumber);
 };
 
 const makeQuestionWithAnswer = (maxNumber) => {
-  const firstNum = generateRandomNumber(maxNumber);
-  const secondNum = generateRandomNumber(maxNumber);
-  const question = `${firstNum} ${secondNum}`;
-  const answer = gcd(firstNum, secondNum);
+  const firstNumber = generateRandomNumber(maxNumber);
+  const secondNumber = generateRandomNumber(maxNumber);
+  const question = `${firstNumber} ${secondNumber}`;
+  const answer = gcd(firstNumber, secondNumber);
   return { question, answer: String(answer) };
 };
 
