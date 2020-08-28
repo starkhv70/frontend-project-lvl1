@@ -1,5 +1,4 @@
-/* eslint-disable filenames/match-exported */
-
+/* eslint-disable import/prefer-default-export */
 import readlineSync from 'readline-sync';
 
 const greetingUser = () => {
@@ -7,4 +6,4 @@ const greetingUser = () => {
   console.log(`Hello, ${userName}!`);
 };
 
-export default greetingUser;
+export { greetingUser };

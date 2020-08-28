@@ -4,10 +4,6 @@ env:
 extends:
   - 'airbnb-base'
 
-plugins:
-  - filenames
-
 rules:
   no-console: 0
   import/extensions: 0
-  filenames/match-exported: 1

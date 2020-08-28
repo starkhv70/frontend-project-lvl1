@@ -1,5 +1,5 @@
-import generateRandomNumber from '../util.js';
-import createGamePlay from '../index.js';
+import { generateRandomNumber } from '../util.js';
+import { createGamePlay } from '../index.js';
 
 const title = 'What number is missing in the progression?';
 

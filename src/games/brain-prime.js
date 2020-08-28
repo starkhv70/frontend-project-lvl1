@@ -1,5 +1,5 @@
-import generateRandomNumber from '../util.js';
-import createGamePlay from '../index.js';
+import { generateRandomNumber } from '../util.js';
+import { createGamePlay } from '../index.js';
 
 const title = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
