@@ -1,5 +1,5 @@
 import { generateRandomNumber } from '../util.js';
-import { createGamePlay } from '../index.js';
+import { RunGame, gameRounds } from '../index.js';
 
 const title = 'What number is missing in the progression?';
 
@@ -11,16 +11,16 @@ const generateProgression = (firstMember, step, length) => {
   return progression;
 };
 
-const makeQuestionWithAnswer = (maxNumber) => {
-  const firstMember = generateRandomNumber(maxNumber);
-  const step = generateRandomNumber(10);
+const makeQuestionWithAnswer = (minNumber, maxNumber) => {
+  const firstMember = generateRandomNumber(minNumber, maxNumber);
+  const step = generateRandomNumber(0, 10);
   const progressionLength = 10;
   const progression = generateProgression(firstMember, step, progressionLength);
-  const randomIndex = generateRandomNumber(progressionLength);
+  const randomIndex = generateRandomNumber(0, progressionLength);
   const answer = progression[randomIndex];
   progression[randomIndex] = '..';
   const question = progression.join(' ');
   return { question, answer: String(answer) };
 };
 
-export default () => createGamePlay(title, makeQuestionWithAnswer);
+export default () => RunGame(title, makeQuestionWithAnswer, gameRounds);

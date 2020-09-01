@@ -2,16 +2,17 @@
 
 import readlineSync from 'readline-sync';
 
+const minRandomNumber = 0;
 const maxRandomNumber = 200;
+const gameRounds = 3;
 
-const createGamePlay = (title, makeQuestionWithAnswer) => {
+const RunGame = (title, makeQuestionWithAnswer, numOfRounds) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ', { limit: /\p{L}/gu });
   console.log(`Hello, ${userName}!`);
   console.log(title);
-  const numOfTries = 3;
-  for (let i = 0; i < numOfTries; i += 1) {
-    const { question, answer } = makeQuestionWithAnswer(maxRandomNumber);
+  for (let i = 0; i < numOfRounds; i += 1) {
+    const { question, answer } = makeQuestionWithAnswer(minRandomNumber, maxRandomNumber);
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer:');
     if (userAnswer !== answer) {
@@ -24,4 +25,4 @@ const createGamePlay = (title, makeQuestionWithAnswer) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export { createGamePlay };
+export { RunGame, gameRounds };

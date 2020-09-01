@@ -1,4 +1,4 @@
 /* eslint-disable import/prefer-default-export */
-const generateRandomNumber = (max) => Math.floor(Math.random() * Math.floor(max));
+const generateRandomNumber = (min, max) => (min + Math.floor(Math.random() * Math.floor(max)));
 
 export { generateRandomNumber };
