@@ -1,5 +1,5 @@
 import { generateRandomNumber } from '../util.js';
-import { RunGame, gameRounds } from '../index.js';
+import { runGame } from '../index.js';
 
 const title = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -21,4 +21,4 @@ const makeQuestionWithAnswer = (minNumber, maxNumber) => {
   return { question, answer: String(answer) };
 };
 
-export default () => RunGame(title, makeQuestionWithAnswer, gameRounds);
+export default () => runGame(title, makeQuestionWithAnswer);

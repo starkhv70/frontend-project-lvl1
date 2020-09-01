@@ -1,5 +1,5 @@
 import { generateRandomNumber } from '../util.js';
-import { RunGame, gameRounds } from '../index.js';
+import { runGame } from '../index.js';
 
 const title = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -11,4 +11,4 @@ const makeQuestionWithAnswer = (minNumber, maxNumber) => {
   return { question, answer };
 };
 
-export default () => RunGame(title, makeQuestionWithAnswer, gameRounds);
+export default () => runGame(title, makeQuestionWithAnswer);
