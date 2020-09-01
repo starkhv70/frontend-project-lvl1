@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 import readlineSync from 'readline-sync';
 
 const minRandomNumber = 0;
@@ -25,4 +23,4 @@ const runGame = (title, makeQuestionWithAnswer) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export { runGame };
+export default runGame;
